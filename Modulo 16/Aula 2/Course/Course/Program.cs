@@ -32,6 +32,17 @@ namespace Course
             {
                 Console.WriteLine(p);
             }
+
+            list.Add(new Product("Tv", 900.00));
+            list.Add(new Product("Mouse", 50.00));
+            list.Add(new Product("Tablet", 350.50));
+            list.Add(new Product("HD Case", 80.90));
+
+            list.ForEach(p => { p.Price += p.Price * 0.1; });
+            foreach (Product p in list)
+            {
+                Console.WriteLine(p);
+            }
         }
 
         static int CompareProducts(Product p1, Product p2)
